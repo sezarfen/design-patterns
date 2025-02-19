@@ -39,6 +39,23 @@ Let's assume you want to make database connection and executing query on single 
 in each example, it is important that, we didn't generate direct instances ourselves, using it's static attributes obtain
 instance of a class without using **new** keyword in both languages.
 
+Implementation with Java programming Language:
+```java
+class Singleton {
+    private static Singleton obj;
+    private Singleton() {}
+
+    // Only one thread can execute this at a time
+    public static synchronized Singleton getInstance()
+    {
+        if (obj == null)
+            obj = new Singleton();
+        return obj;
+    }
+}
+// Here using synchronized makes sure that only one thread at a time can execute getInstance().
+```
+
 Reference for Singleton : https://www.geeksforgeeks.org/singleton-design-pattern/
 
 ## Factory Method Design Pattern
