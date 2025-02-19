@@ -1,4 +1,3 @@
-#include <QCoreApplication>
 #include "Singleton.h"
 #include "FactoryMethod.h"
 #include "AbstractFactory.h"
@@ -12,10 +11,6 @@
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
-
-
-
     // START
     // Singleton Design Pattern
     std::cout << "***Singleton Design Pattern Example***" << std::endl;
@@ -215,5 +210,5 @@ int main(int argc, char *argv[])
     invoker.executeCommand();
     // END
 
-    return a.exec();
+    return EXIT_SUCCESS;
 }
